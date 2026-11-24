@@ -13,3 +13,20 @@
  *
  * @see: https://codeigniter.com/user_guide/extending/common.html
  */
+
+/**
+ * by Gemini
+ * The goal of this file is to allow you to miss grating
+ * your own functions, as well as overwrite the standard
+ * ones provided by the framework.
+ *
+ * See the user guide for more information:
+ * https://codeigniter.com/user_guide/general/common_functions.html
+ */
+
+if (! function_exists('format_rupiah')) {
+    function format_rupiah(int|float $amount): string
+    {
+        return 'Rp ' . number_format($amount, 0, ',', '.');
+    }
+}
